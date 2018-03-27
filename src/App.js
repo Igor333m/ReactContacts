@@ -25,6 +25,7 @@ const contacts = [
 class App extends Component {
 	render(){
 		return(
+			// Passing a list of contacts prop into ListContacts component
 			<div>
 		  	<ListContacts contacts={contacts} />
 		  </div>
