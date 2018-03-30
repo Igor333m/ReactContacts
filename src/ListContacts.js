@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {Component} from "react"
 
 /*
 *	Component that lists our contacts
@@ -16,7 +16,7 @@ class ListContacts extends Component {
       				<p>{contact.name}</p>
       				<p>{contact.email}</p>
       			</div>
-      			<button className="contact-remove">
+      			<button onClick={() => this.props.onDeleteContact(contact)} className="contact-remove">
       				Remove
       			</button>
       		</li>
@@ -26,4 +26,4 @@ class ListContacts extends Component {
   }
 }
 
-export default ListContacts;
+export default ListContacts
