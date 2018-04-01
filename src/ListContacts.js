@@ -35,6 +35,7 @@ class ListContacts extends Component {
 		}
 
 		showingContacts.sort(sortBy("name"))
+		
     return (
     	<div className="list-contacts">
     		<div className="list-contacts-top">
