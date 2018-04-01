@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ListContacts from "./ListContacts"
+import CreateContact from "./CreateContact"
 import * as ContactsAPI from "./utils/ContactsAPI"
 
 class App extends Component {
@@ -24,7 +25,10 @@ class App extends Component {
 		return(
 			// Passing a list of contacts prop into ListContacts component
 			<div>
-		  	<ListContacts contacts={this.state.contacts} onDeleteContact={this.removeContact}/>
+		  	<ListContacts
+		  		contacts={this.state.contacts}
+		  		onDeleteContact={this.removeContact}/>
+		  	<CreateContact />
 		  </div>
 		)
 	}
