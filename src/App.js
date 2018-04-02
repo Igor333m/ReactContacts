@@ -28,9 +28,12 @@ class App extends Component {
 			<div>
 				{this.state.screen === "list" && (
 					<ListContacts
-		  		// Passing a list of contacts prop into ListContacts component
+		  		// Passing a list of props into ListContacts component
 		  		contacts={this.state.contacts}
-		  		onDeleteContact={this.removeContact}/>
+		  		onDeleteContact={this.removeContact}
+		  		onNavigate={() => {
+		  			this.setState({ screen: "create"})
+		  		}}/>
 				)}
 		  	{this.state.screen === "create" && (
 		  		<CreateContact />
@@ -38,7 +41,7 @@ class App extends Component {
 		  </div>
 		)
 	}
-	
+
 }
 
 export default App
