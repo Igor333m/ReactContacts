@@ -1,7 +1,8 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import escapeRegExp from "escape-string-regexp"
-import sortBy from "sort-by"
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import escapeRegExp from 'escape-string-regexp'
+import sortBy from 'sort-by'
 
 /*
 *	Component that lists our contacts
@@ -46,11 +47,10 @@ class ListContacts extends Component {
     			 value={this.state.query}
     			 onChange={(event) => this.updateQuery(event.target.value)}
     			/>
-    			<a 
-    				href="#create"
+    			<Link 
+    				to="/create"
     				className="add-contact"
-    				onClick={this.props.onNavigate}
-						>Add contact</a>
+						>Add contact</Link>
     		</div>
 
     		{showingContacts.length !== this.props.contacts.length && (
